@@ -9,7 +9,7 @@ const ALBUM_ID = "2nLOHgzXzwFEpl62zAgCEC?si=92gvi84ZTLKfMD-YgYWAUw"; // By defau
 const redirectUri = (uri) => {
   if (!uri) {
     const err = new Error(
-      "No redirect URI provided.\nPlease provide a redirect URI in env.js.\n You can find the file in utils/env.js."
+      "No redirect URI provided.\nPlease provide a redirect URI in env.js.\n You can find the file in utils/env.js.",
     );
     console.error(err);
     alert(err);
