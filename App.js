@@ -5,7 +5,7 @@ import { useSpotifyAuth } from "./utils";
 
 export default function App() {
   // Pass in true to useSpotifyAuth to use the album ID (in env.js) instead of top tracks
-  const { token, tracks, getSpotifyAuth } = useSpotifyAuth();
+  const { token, tracks, getSpotifyAuth } = useSpotifyAuth(true);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -16,9 +16,9 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: Themes.colors.background,
-    justifyContent: "center",
     alignItems: "center",
+    backgroundColor: Themes.colors.background,
     flex: 1,
+    justifyContent: "center",
   },
 });
