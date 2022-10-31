@@ -24,10 +24,10 @@ const styles = StyleSheet.create({
     width: 20,
   },
   text: {
-    marginLeft: 8,
     color: colors.white,
-    fontWeight: "bold",
-    textTransform: "uppercase",
     fontSize: 16,
+    fontWeight: "bold",
+    marginLeft: 8,
+    textTransform: "uppercase",
   },
 });
