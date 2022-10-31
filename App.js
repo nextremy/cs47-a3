@@ -1,5 +1,6 @@
-import { SafeAreaView, StyleSheet } from "react-native";
+import { SafeAreaView, StyleSheet, Text } from "react-native";
 import { Themes } from "./assets/Themes";
+import SongList from "./components/SongList";
 import SpotifyAuthButton from "./components/SpotifyAuthButton";
 import { useSpotifyAuth } from "./utils";
 
@@ -9,7 +10,11 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      {token ? null : <SpotifyAuthButton authFunction={getSpotifyAuth} />}
+      {token ? (
+        <SongList tracks={tracks} />
+      ) : (
+        <SpotifyAuthButton authFunction={getSpotifyAuth} />
+      )}
     </SafeAreaView>
   );
 }
