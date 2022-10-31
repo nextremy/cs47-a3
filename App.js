@@ -1,6 +1,7 @@
 import { StyleSheet, SafeAreaView, Text } from "react-native";
 import { useSpotifyAuth } from "./utils";
 import { Themes } from "./assets/Themes";
+import SpotifyAuthButton from "./components/SpotifyAuthButton";
 
 export default function App() {
   // Pass in true to useSpotifyAuth to use the album ID (in env.js) instead of top tracks
@@ -8,8 +9,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* TODO: Your code goes here */}
-      <Text style={{ color: "white" }}>Welcome to Assignment 3 - Spotify!</Text>
+      {token ? null : <SpotifyAuthButton authFunction={getSpotifyAuth} />}
     </SafeAreaView>
   );
 }
